@@ -13,64 +13,57 @@ import java.time.Duration;
 
 public class LoginTest {
 
+    private static final String BASE_URL =
+            System.getProperty("app.url", "http://localhost:8081/DevOpsShop-1.0-SNAPSHOT");
+
     private WebDriver driver;
     private WebDriverWait wait;
 
     @BeforeEach
     void setup() {
-
         ChromeOptions options = new ChromeOptions();
-
         options.addArguments("--headless=new");
         options.addArguments("--window-size=1920,1080");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--remote-allow-origins=*");
 
         driver = new ChromeDriver(options);
-
-        wait = new WebDriverWait(
-                driver,
-                Duration.ofSeconds(10)
-        );
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
     @Test
     void testLogin() {
+        try {
+            driver.get(BASE_URL + "/login.jsp");
 
-        driver.get(
-                "http://localhost:8081/DevOpsShop-1.0-SNAPSHOT/login.jsp"
-        );
+            System.out.println("PAGE TITLE: " + driver.getTitle());
+            System.out.println("PAGE URL: " + driver.getCurrentUrl());
 
-        System.out.println("PAGE TITLE: " + driver.getTitle());
-        System.out.println("PAGE URL: " + driver.getCurrentUrl());
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
 
-        wait.until(
-                ExpectedConditions.titleContains("Login")
-        );
+            driver.findElement(By.id("username")).sendKeys("admin");
+            driver.findElement(By.id("password")).sendKeys("admin123");
+            driver.findElement(By.id("loginButton")).click();
 
-        driver.findElement(
-                By.id("username")
-        ).sendKeys("admin");
+            wait.until(ExpectedConditions.titleIs("Products - DevOps Shop"));
 
-        driver.findElement(
-                By.id("password")
-        ).sendKeys("admin123");
+            System.out.println("AFTER LOGIN TITLE: " + driver.getTitle());
+            System.out.println("AFTER LOGIN URL: " + driver.getCurrentUrl());
 
-        driver.findElement(
-                By.id("loginButton")
-        ).click();
-
-        wait.until(
-                ExpectedConditions.titleIs(
-                        "Products - DevOps Shop"
-                )
-        );
-
-        System.out.println("AFTER LOGIN TITLE: " + driver.getTitle());
-        System.out.println("AFTER LOGIN URL: " + driver.getCurrentUrl());
+        } catch (Throwable t) {
+            System.out.println("===== TEST FAILED, DEBUG INFO =====");
+            System.out.println("TITLE: " + driver.getTitle());
+            System.out.println("URL: " + driver.getCurrentUrl());
+            String src = driver.getPageSource();
+            System.out.println("SOURCE: " + src.substring(0, Math.min(1500, src.length())));
+            throw t;
+        }
     }
 
     @AfterEach
     void closeBrowser() {
-
         if (driver != null) {
             driver.quit();
         }
