@@ -41,7 +41,7 @@
 <section class="features">
     <div class="feature-card">
         <div class="feature-icon">
-            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&auto=format&fit=crop&q=60" alt="Laptop">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2QgzOcNrJS09f_xO1b5wEc94uC4jFXSUi9NwF3mGGWg&s=10" alt="Laptop">
         </div>
         <h3>Latest Laptops</h3>
         <p>Powerful laptops for work, coding, and entertainment.</p>
