@@ -80,7 +80,7 @@
         <div class="product-card">
 
             <div class="product-image laptop">
-                <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="https://plus.unsplash.com/premium_photo-1670963025020-c6b206fbafc7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:0,cw:1999,ch:1124,q:80,w:1999/EPXv6HUoN7zEWmNon7hA5H.jpg" alt="https://plus.unsplash.com/premium_photo-1670963025020-c6b206fbafc7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
             </div>
 
             <div class="product-info">
