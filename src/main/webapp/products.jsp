@@ -114,7 +114,7 @@
         <div class="product-card">
 
             <div class="product-image mobile">
-            <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-duo-witb-star-white-202609_FMT_WHH?wid=688&hei=744&fmt=jpeg&qlt=90&.v=UXRzMmJCVFBRbmt6ckpmVFpkSGV6eEtyVERMOFdiWWk0VWhrQzkzZjY1eS9yd2xEK3NmZ0hESDl0Ny9qQ0JkVHM2dldETnFhMG5PaUx3dEUvSEQyWjFKM1Q5eVhMMytSb1pTa0R5OWk3VjFWZVVDWDEwR2dwMitGTkRzT00raGY" alt="https://images.unsplash.com/photo-1569144157596-10825eecdde2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmaGLt9N6Ev7XsEsMV6Hz0Czp8EzPsBv7oH5qU2HPetw&s=10" alt="https://images.unsplash.com/photo-1569144157596-10825eecdde2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D">
 
 
             </div>
